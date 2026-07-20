@@ -1,5 +1,6 @@
 {:paths ["src"]
- :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+ :deps {io.github.kotoba-lang/org-iso-10303 {:local/root "../org-iso-10303"}
+        org.clojure/clojure {:mvn/version "1.11.1"}
         org.clojure/clojurescript {:mvn/version "1.11.132"}}
  :aliases
  {:test {:extra-paths ["test"]

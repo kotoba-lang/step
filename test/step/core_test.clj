@@ -13,6 +13,8 @@
          (s/entity [4 :axis2-placement-3d "p" [:ref 1] [:ref 2] :$])) "#refs and $ unset")
   (is (= "#7 = SURFACE_STYLE('', .STEEL.);" (s/entity [7 :surface-style "" :steel])) "enum value")
   (is (= "#8 = X('o''brien');" (s/entity [8 :x "o'brien"])) "internal quote doubled")
+  (is (= "#81 = X(IFCTEXT('portable'));"
+         (s/entity [81 :x [:typed :ifctext "portable"]])) "typed values")
   (is (= "#9 = P('', 1.5, 100.);" (s/entity [9 :p "" 1.5 100])) "fractional vs whole real"))
 
 (deftest a-step-file
@@ -24,4 +26,3 @@
     (is (str/includes? src "FILE_SCHEMA(('AUTOMOTIVE_DESIGN'));"))
     (is (str/includes? src "DATA;\n#1 = CARTESIAN_POINT('', (0., 0., 0.));"))
     (is (str/ends-with? src "ENDSEC;\nEND-ISO-10303-21;\n"))))
-
