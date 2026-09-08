@@ -3,7 +3,7 @@
    rendering (strings, STEP reals with a trailing '.', #refs, (lists), $/* and .ENUM. values), the
    entity-type token casing, and the HEADER/DATA section wrapping."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [step.core :as s]))
 
 (deftest entity-args
