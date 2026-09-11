@@ -7,5 +7,5 @@ The implementation lives in `step.core`; `kotoba.step` is provided as a compatib
 ## Test
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
