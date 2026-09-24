@@ -2,7 +2,7 @@
   "Golden tests for kotoba.step — the STEP (ISO 10303-21) mechanical-CAD hiccup. They pin entity argument
    rendering (strings, STEP reals with a trailing '.', #refs, (lists), $/* and .ENUM. values), the
    entity-type token casing, and the HEADER/DATA section wrapping."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [step.core :as s]))
 
